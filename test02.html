@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>test html</title>
+
+        <style media="screen">
+            #header > h1, #header > h2 {color:red;}
+            #section > h1, #section > h2 {color : orange;}
+            h1:hover {background: red;}
+            h1:active {background: yellow;}
+            input:enabled { background-color: white;}
+            input:disabled {background-color: gray;}
+            input:focus{background-color: orange;}
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Header</h1>
+            <div id="nav">
+                <h1>Navigation</h1>
+            </div>
+        </div>
+        <div id="section">
+            <h1 class="title">Section Title</h1>
+            <p>Paragraph!! Hello Html!</p>
+        </div>
+        <div id="footer">
+            <form>
+                <input type="text" name="" value="" enabled>
+                <input type="text" name="" value="" disabled>
+            </form>
+        </div>
+    </body>
+</html>
