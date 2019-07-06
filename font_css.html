@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <style media="screen">
+            .font_arial {
+                font_family: Arial, sans-serif;
+            }
+
+            .font_roman {
+                font_family: 'Times New Roman', serif;
+            }
+
+            .font_italic {
+                font-style: italic;
+            }
+
+            .font_big {
+                font-size: 2em;
+            }
+
+            .font_bold {
+                font-weight: bold;
+            }
+
+            .font_center {
+                text-align: center;
+            }
+
+            .font_right {
+                text-align: right;
+            }
+
+            .button {
+                width: 150px;
+                height: 70px;
+                background-color: #FF6A00;
+                border: 10px solid #FFFFFF;
+                border-radius: 30px;
+                box-shadow: 5px 5px 5px #A9A9A9;
+            }
+
+            .button > a {
+                display: block;
+                line-height: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="font_arial font_italic">Header 1</h1>
+        <p class="font_roman">Paragraph</p>
+        <div class="button">
+            <a href="#" class="font_big font_italic font_bold font_center">Click</a>
+        </div>
+
+        <p class="font_big font_italic font_bold font_center">Lorem ipsum dolor amet</p>
+        <p class="font_bold font_right">2019.07.06</p>
+        <p>Lerem ipsum dolor sit amet, consectetur adipiscing elit.<br />안녕하세요? 지식파트너 가비아입니다.
+
+inherit은 단어 뜻 그대로 상속받는 겁니다.
+상위 엘리먼트의 속성값을 그대로 물려받아 적용하라는 겁니다.
+
+이해를 돕기 위해 예제를 보시기 바랍니다
+
+첨부 이미지
+
+"일반 링크" 색상은 CSS에서 선언된 붉은색입니다.
+"div 문장" 색상 역시 CSS에서 선언된 파란색입니다.
+"p 문장" 은 CSS에서 선언하지 않았습니다. 이런 경우 상위 엘리먼트 즉 div 의 color를 상속받아 파란색으로 나오게 됩니다.
+"inherit 링크" 색상은 명시적으로 inherit 이라고 선언하였으므로 상위 엘리먼트인 div의 색상을 상속받아 파란색으로 나오게 됩니다.
+
+
+도움이 되었나요? 가비아였습니다
+</html>
