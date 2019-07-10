@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chapter 7</title>
+
+        <!-- init CSS code -->
+        <style media="screen">
+            * { margin: 0; padding: 0; }
+            body {
+                font-family: 'Helvetica', sans-serif;
+
+                /* min-width setting */
+                min-width: 760px;
+            }
+            li { list-style: none; }
+            a { text-decoration: none; }
+        </style>
+
+        <!-- Header -->
+        <style media="screen">
+            #main_header {
+                height: 60px;
+                line-height: 60px;
+                padding-left: 10px;
+                border-bottom: 1px solid black;
+
+                background: #1D4088;
+                color: white;
+            }
+        </style>
+
+        <!-- Navigation -->
+        <style media="screen">
+            #main_gnb {
+                overflow: hidden;
+                border-bottom: 1px solid black;
+                background-color: #32394A
+            }
+
+            #main_gnb > ul.left {
+                overflow: hidden;
+                float: left;
+            }
+
+            #main_gnb > ul.right {
+                overflow: hidden;
+                float: right;
+            }
+
+            #main_gnb > ul.left > li { float: left; }
+            #main_gnb > ul.right > li { float: left; }
+
+            #main_gnb a {
+                display: block;
+                padding: 10px 20px;
+
+                border-left: 1px solid #5F6673;
+                border-right: 1px solid #242A37;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+
+        <!-- Content -->
+        <style media="screen">
+            #wrap { overflow: hidden; }
+
+            #wrap > #main_lnb {
+                float: left;
+                width: 200px;
+            }
+
+            #wrap > #content_wrap {
+                float: left;
+                width: 100%;
+                margin-right: -200px;
+            }
+
+            #wrap > #content_wrap > #content {
+                padding-right: 200px;
+            }
+
+            #content {
+                background: white;
+                border-left: 1px solid black;
+            }
+
+            #content > article {
+                padding: 10px;
+            }
+        </style>
+
+        <!-- Aside -->
+        <style media="screen">
+            #wrap { background: #71B1D1; }
+            #main_lnb > ul > li > a {
+                display: block;
+                height: 40px; line-height: 40px;
+                padding-left: 15px;
+
+                border-top: 1px solid #96D6F6;
+                border-bottom: 1px solid #6298D2;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+
+        <!-- Footer -->
+        <style media="screen">
+            #main_footer {
+                padding: 10px;
+                border-top: 3px solid black;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="main_header">
+            <h1>Fluid</h1>
+        </header>
+
+        <nav id="main_gnb">
+            <ul class="left">
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+            </ul>
+
+            <ul class="right">
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+            </ul>
+        </nav>
+
+        <div id="wrap">
+            <nav id="main_lnb">
+                <ul>
+                    <li><a href="#">Button</a></li>
+                    <li><a href="#">Button</a></li>
+                    <li><a href="#">Button</a></li>
+                    <li><a href="#">Button</a></li>
+                    <li><a href="#">Button</a></li>
+                </ul>
+            </nav>
+
+            <div id="content_wrap">
+                <div id="content">
+                    <article>
+                        <h1>Lorem ipsum dolor sit amet</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero.
+                            Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus.
+                            Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi,
+                            in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh,
+                            pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl,
+                            eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est,
+                            blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque.
+                            Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor.
+                             Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.
+                         </p>
+                    </article>
+                    <article>
+                        <h1>Lorem ipsum dolor sit amet</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc.
+                            Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit,
+                            sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis.
+                            Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris.
+                            Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero,
+                            euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc.
+                            Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing.
+                            Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.
+                        </p>
+                    </article>
+                    <article>
+                        <h1>Lorem ipsum dolor sit amet</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc.
+                            Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit,
+                            sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis.
+                            Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris.
+                            Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero,
+                            euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc.
+                            Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing.
+                            Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <footer id="main_footer">
+            <h3>HTML5 + CSS3 Basic</h3>
+            <address class="">
+                Website Layout Basic
+            </address>
+        </footer>
+    </body>
+</html>
