@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        /*var timerId = setTimeout(function () { alert('3 second goes by~') }, 3000);
+        alert(typeof timerId + ": " + timerId);
+
+        var intervalId = setInterval(function () { alert('3 interval') }, 3000);
+        alert(typeof intervalId + ": " + intervalId);
+
+        setTimeout(function () { clearInterval(intervalId); }, 10000);*/
+
+       /* alert('A');
+        setTimeout(function () {
+            alert('B');
+        }, 0);
+        alert('C');*/
+
+
+       /* for (var i = 0; i < 3; i++) {
+            setTimeout(function () {
+                alert(i);
+            }, 1);
+        }*/
+
+        /*for (var i = 0; i < 3; i++) {
+            (function (closed_i) {
+                setTimeout(function () {
+                    alert(closed_i);
+                }, 0);
+            })(i);
+        }*/
+
+        [0, 1, 2].forEach(function (i) {
+            setTimeout(function () {
+                alert(i);
+            })
+        });
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

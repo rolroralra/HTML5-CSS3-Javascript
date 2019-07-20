@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+       /* alert(typeof alert + " : " + alert);
+
+        var myFunction = function () {
+            alert("This is My Function!");
+        };
+
+        alert(typeof myFunction + ": " + myFunction);
+
+        myFunction();
+
+
+        function myFunction2() {
+            alert("This is My Function2!");
+        }
+
+        alert(typeof myFunction2 + ": " + myFunction2);
+
+        function myFunction2() {
+            alert("This is My Function2?");
+        }
+
+        alert(typeof myFunction2 + ": " + myFunction2);
+
+        myFunction2();
+
+
+        myFunction = function () {
+            alert("This is My Function?");
+        };
+
+        myFunction();*/
+
+        /*alert(typeof "String");
+        alert(typeof false);
+        alert(typeof 1234);
+        alert(typeof {});
+        alert(typeof Array(10));
+        alert(typeof prompt);
+        alert(typeof undefined);
+        if (typeof "String" === "string") {
+            alert("olleh! string");
+        }
+        if (typeof false === "boolean") {
+            alert("olleh! boolean");
+        }
+        if (typeof 1234 === "number") {
+            alert("olleh! number");
+        }
+        if (typeof {} === "object") {
+            alert("olleh! object");
+        }
+        if (typeof Array() === "object") {
+            alert("olleh! array is object");
+        }
+        if (typeof function () { } === "function") {
+            alert("olleh! function");
+        }
+
+        if (typeof undefinedVar === "undefined") {
+            alert("olleh! undefined");
+        }*/
+
+
+        /*function sumAll() {
+            var output = 0;
+            var n = arguments.length;
+            *//*for (var i = 0; i < n; i++) {
+                output += Number(arguments[i]);
+            }*//*
+
+            for (var i in arguments) {
+                output += Number(arguments[i]);
+            }
+
+            return Number(output);
+        }
+
+        alert(sumAll(1, 2, 3));*/
+
+        /*alert(pythagoras(3, 4));
+
+        function pythagoras(width, height) {
+            return Math.sqrt(square(width) + square(height));
+        }
+
+        function square(number) {
+            return Number(number * number);
+        }
+        
+        function square(width, height, hypotenuse) {
+            if (width * width + height * height == hypotenuse * hypotenuse) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        (function() {
+            alert("itselft anonymous function called!")
+        }) ();*/
+
+
+        /*function callManyTimes(inputFunction, nTimes) {
+            for (var i = 0; i < nTimes; i++) {
+                inputFunction();
+            }
+        }
+
+        function myFunction() {
+            alert("myFunction is called!");
+        }
+
+        callManyTimes(myFunction, 3);*/
+
+
+        /*function returnMyFunction() {
+            return function () {
+                alert("myFunction is called!");
+            };
+        }
+
+        returnMyFunction()();*/
+
+            
+        function test(inputString) {
+            var output = inputString + " is Called!";
+
+            return function () {
+                alert(output);
+            };
+        }
+
+        test("Clouse Test")();
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        window.onload = function () {
+            var list = '';
+
+            list += '<ul>';
+            list += '   <li>Hello</li>';
+            list += '   <li>JavaScript</li>';
+            list += '</ul>'
+
+            document.body.innerHTML = list;
+        }
+
+        /*alert(typeof 'String');
+        alert(typeof (typeof ('String')));
+
+        alert(typeof 11);
+        alert(typeof true);
+        alert(typeof function () { });
+        alert(typeof {});
+
+        var undefinedVar;
+        alert(typeof undefinedVar);
+
+        undefinedVar = prompt('inputString', 'Hello JavaScript!');
+        confirm(undefinedVar);
+        confirm(typeof undefinedVar);*/
+        
+        /*var inputNumber = Number(prompt('inputNumber', 1234));
+        confirm(typeof inputNumber + ': ' + inputNumber);
+        confirm(typeof Number);*/
+
+
+        /*alert(!!0);
+        alert(!!NaN);
+        alert(!'');
+        alert(!!null);
+        alert(!!undefined);*/
+
+        /*alert('' == false);
+        alert('' == 0);
+        alert(0 == false);
+        alert('273' == 273);*/
+
+        /*alert('' === false);
+        alert('' === 0);
+        alert(0 === false);
+        alert('273' === 273);*/
+
+        /*var date = new Date();
+        var varDate = date.getVarDate;
+        var hour = date.getHours();
+
+        alert(typeof date + ": " + date);
+        alert(typeof hour + ": " + hour);
+        alert(typeof varDate + ": " + varDate);*/
+
+        /*var inputNumber = Number(prompt('inputNumber', '1234'));
+        alert(typeof inputNumber + ": " + inputNumber);
+        if (inputNumber === Number.NaN) {
+            alert("wrong input number!");
+        }
+        else if (Number.isNaN(inputNumber)) {
+            alert("Wrong Input Number!");
+        }
+
+        if (Number.NaN === NaN) {
+            alert("Number.NaN === NaN");
+        }
+        if (NaN === NaN) {
+            alert("NaN === NaN");
+        }*/
+
+
+        /*var array = [123, "123", true, function () { }, {}];
+        array.push(undefined);
+        for (var input in array) {
+            
+            alert(typeof input + ", index: " + input + ", " + typeof array[input] + ": " + array[input]);
+        }*/
+
+        /*var curTime = new Date().getTime();
+        alert(typeof curTime + ": " + curTime);*/
+
+       /* var output = '';
+        var n = 10;
+
+        for (var i = 0; i < n; i++) {
+            for (var j = 0; j < n - i; j++) {
+                output += ' ';
+            }
+            for (var j = 0; j < 2 * i + 1; j++) {
+                output += '*';
+            }
+            
+            output += '\n';
+        }
+
+        alert(output);*/
+
+        for (var i = 0; true; i++) {
+            alert((i + 1) + '번째 반복문입니다.');
+
+            if (!confirm('계속 하시겠습니까?')) {
+                break;
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
