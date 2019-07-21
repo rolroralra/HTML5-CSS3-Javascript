@@ -26,6 +26,33 @@
 
         person.setName = "ksy";
         alert(person.getName);
+
+        var output = "";
+        var obj = {};
+        Object.defineProperty(obj, "hidden", {
+            "value": {
+                "name": null
+            },
+            "writable": false,
+        });
+
+        Object.defineProperty(obj, "name", {
+            "get": function () {
+                return this.hidden.name;
+            },
+            "set": function (name) {
+                this.hidden.name = name;
+            }
+        });
+
+        obj.name = "john";
+        //obj.hidden.name = "ksy";
+        output += obj.name + '\n';
+
+        obj.name = "ksy";
+        output += obj.name + "\n";
+
+        alert(output);
     </script>
 </head>
 <body>
