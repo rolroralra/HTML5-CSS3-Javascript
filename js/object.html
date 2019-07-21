@@ -80,7 +80,34 @@
 
         var students = [];
 
-        function makeStudent(name, a, b, c) {
+        /* Way1. By Constructor & Prototype of the Object*/
+        function Student(name, a, b, c) {
+            this.name = name;
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+
+        Student.prototype.getSum = function () {
+            return this.a + this.b + this.c;
+        };
+        Student.prototype.getAvg = function () {
+            return this.getSum() / 3;
+        };
+        Student.prototype.toString = function () {
+            return this.name + " " + this.getSum() + " " + this.getAvg();
+        };
+
+        students.push(new Student("ksy", 88, 99, 67));
+        students.push(new Student("abc", 56, 82, 77));
+        students.push(new Student("cde", 30, 99, 92));
+        students.push(new Student("efw", 46, 98, 90));
+        students.push(new Student("qqe", 52, 87, 89));
+        students.push(new Student("pwp", 30, 68, 86));
+        students.push(new Student("gxx", 99, 88, 79));
+
+        /* Way2. By Custom Constructor Function */
+        /*function makeStudent(name, a, b, c) {
             return {
                 "name": name,
                 "a": a,
@@ -104,7 +131,9 @@
         students.push(makeStudent("efw", 46, 98, 90));
         students.push(makeStudent("qqe", 52, 87, 89));
         students.push(makeStudent("pwp", 30, 68, 86));
-        students.push(makeStudent("gxx", 99, 88, 79));
+        students.push(makeStudent("gxx", 99, 88, 79));*/
+
+        /* Way3. By Literal of the Object */
         /*
         students.push({ "name": "ksy", "a": 88, "b": 99, "c": 67 });
         students.push({ "name": "abc", "a": 56, "b": 82, "c": 77 });
@@ -115,7 +144,7 @@
         students.push({ "name": "gxx", "a": 99, "b": 88, "c": 79 });
         */
 
-        for (var i in students) {
+        /*for (var i in students) {
             var _count = 0;
             for (var key in students[i]) {
                 if (typeof students[i][key] == "number") {
@@ -139,7 +168,7 @@
                 return this.getSum() / this.count;
             }
 
-            /************************************************** 
+            *//************************************************** 
              * 
              * BUG!!!! in "with" keyword!
              * 
@@ -168,8 +197,8 @@
                     return this.getSum() / this.count;
                 }
             }
-            ************************************************/
-        }
+            ************************************************//*
+        }*/
 
         var output = "name sum avg\n";
         for (var i in students) {
