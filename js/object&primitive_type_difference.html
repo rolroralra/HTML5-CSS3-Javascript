@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        var primitiveNumber = 123;
+
+        // Primitive Type cannot add "Method" and "Property(Attribute)"
+        /*primitiveNumber.method = function () {
+            return 'Primitive Added Method';
+        };
+        */
+
+        Number.prototype.method = function () {
+            return "Nubmer's Prototype is added method";
+        }
+
+        alert(primitiveNumber.method());
+        alert(new Number().method());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

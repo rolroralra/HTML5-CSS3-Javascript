@@ -200,12 +200,17 @@
             ************************************************//*
         }*/
 
+        students.sort(function (left, right) {
+            return right.getSum() - left.getSum();
+        });
+
         var output = "name sum avg\n";
         for (var i in students) {
             with (students[i]) {
                 output += name + " " + getSum() + " " + getAvg() + "\n"; 
             }
         }
+
         alert(output);
 
     </script>

@@ -6,7 +6,7 @@
     <title></title>
 
     <script>
-        function Rectangle(width, height) {
+        /*function Rectangle(width, height) {
             this.width = width;
             this.height = height;
         }
@@ -17,9 +17,94 @@
 
         var rectangle = new Rectangle(5, 7);
         rectangle.height = -1 ;
-        alert(rectangle.getArea());
+        alert(rectangle.getArea());*/
 
 
+        /* Encapsulation of Javascript Objectr */
+        function Rectangle(w, h) {
+            var width = w;
+            var height = h;
+
+            this.getWidth = function () {
+                return width;
+            }
+
+            this.getHeight = function () {
+                return height;
+            }
+
+            this.setWidth = function (w) {
+                if (w < 0) {
+                    throw 'width must be positive!';
+                }
+
+                width = w;
+            }
+
+            this.setHeight = function (h) {
+                if (h < 0) {
+                    throw 'height must be positive!';
+                }
+
+                height = h;
+            }
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        }
+
+        Rectangle.prototype.toString = function () {
+            return typeof this + "{width : " + this.getWidth() + ", height : " + this.getHeight() + "}";
+        }
+
+       /* var rectangle = new Rectangle(5, 6);
+        rectangle.setHeight(3);
+        alert(rectangle.getArea());*/
+
+    </script>
+
+    <script>
+        function Square(length) {
+            this.super = Rectangle;
+            this.super(length, length);
+        }
+
+        Square.prototype = Rectangle.prototype;
+        Square.prototype.constructor = Square;
+
+        var rectangle = new Rectangle(5, 7);
+        var square = new Square(5);
+        /*alert(square.constructor);
+
+        alert(rectangle.toString());
+        alert(square.toString());
+
+        alert(square instanceof Rectangle);
+        alert(square instanceof Square);*/
+
+    </script>
+
+    <script>
+        var Person = (function () {
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            //Person.prototype.constructor = Person;
+
+            Person.prototype.toString = function () {
+                return this.name + ", " + this.age;
+            }
+
+            return Person;
+        })();
+
+        alert(typeof Person + ", " + Person);
+        var person = new Person("ksy", 33);
+        
+        alert(typeof person + ", " + person.toString());
     </script>
 </head>
 <body>

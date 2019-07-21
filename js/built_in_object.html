@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        var obj = {"property": 222 };
+        var obj2 = new Object();
+
+        /*
+        alert(obj.constructor);
+        alert(Object.prototype.isPrototypeOf(obj2));
+        */
+
+        /*var output = '';
+        output += "hasOwnProperty('property') : " + obj.hasOwnProperty("property") + "\n";
+        output += "hasOwnProperty('constructor') : " + obj.hasOwnProperty("constructor") + "\n";
+        output += "propertyIsEnumerable('property') : " + obj.propertyIsEnumerable("property") + "\n";
+        output += "propertyIsEnumerable('constructor') : " + obj.propertyIsEnumerable("constructor") + "\n";
+
+        alert(output);
+
+        alert("constructor" in obj);
+
+        for (var key in obj) {
+            alert("key : " + key + ", value : " + obj[key]);
+        }*/
+
+
+        var numberFromLiteral = 222;
+        var numberFromObject = new Number(123.12345);
+
+        /*alert(typeof numberFromLiteral);
+        alert(typeof numberFromObject);
+
+        if (numberFromObject instanceof Number) {
+            alert("numberFromObject is instance by Number constructor");
+        }
+        if (numberFromLiteral instanceof Number) {
+            alert("numberFromLiteral is instance by Number constructor");
+        }
+        if (numberFromLiteral.constructor === Number) {
+            alert("numberFromLiteral is instance by Number constructor");
+        }*/
+
+
+        var output = '';
+        /*
+        output += numberFromObject.toFixed(3) + '\n';
+        output += numberFromObject.toPrecision(20) + '\n';
+        output += numberFromObject.toExponential(4) + '\n';
+        output += (123.12345).toFixed(2) + '\n';
+        
+
+        function MyConstructor() { }
+
+        MyConstructor.property = 777;
+        output += MyConstructor.property + '\n';
+
+        var number = Number.MAX_VALUE;
+        var addNumber = Number('0.001e+308');
+        output += (number + 1) + '\n';
+        output += (number + addNumber) + '\n';
+
+
+
+        var stringFromLiteral = 'Hello String';
+        var stringFromConstructor = new String('Hello String from Constructor');
+
+        output += typeof stringFromLiteral + '\n';
+        output += typeof stringFromConstructor + '\n';
+
+        output += stringFromConstructor.substring(0, 7) + '\n';
+
+
+        var array = [1, 2, 3, 4];
+        output += array.concat([5, 6], 7).toString() + '\n';
+        output += array.join(" ") + '\n';
+
+
+        var date = new Date();
+        date.setDate(date.getDate() + 1);
+        date.setMonth(date.getMonth() + 1);
+
+        Date.prototype.getInterval = function (inputDate) {
+            return Math.floor((inputDate.getTime() - this.getTime()) / (1000 * 60 * 60 * 24));
+        };
+
+        output += new Date().getInterval(date) + '\n';
+
+        output += date + '\n';
+
+        output += (function () { }).prototype + '\n';
+
+        output += new Object().__proto__ + '\n';
+
+        output += Array.isArray([1, 2, 3]) + '\n';
+        output += Array.isArray({}) + '\n';
+        output += Array.isArray("123") + '\n';
+        output += Array.isArray(123) + '\n';*/
+
+
+
+        var arr = [1, 2, 3];
+
+        /*var sum = 0;
+        arr.forEach(function (element, index, array) {
+            sum += element;
+            //output += index + ": " + element + "-> " + sum + "\n";
+            output += index + ": " + array[index] + "-> " + sum + "\n";
+        });
+
+        sum = 0;
+        *//*var outArr = *//*[2, 3, 4].map(function (element, index, array) {
+            return element * element;
+        }).forEach(function (element, index, array) {
+            sum += element;
+            //output += index + ": " + element + "-> " + sum + "\n";
+            output += index + ": " + array[index] + "-> " + sum + "\n";
+        });
+
+        arr.filter(function (element, index, array) {
+            return element < 2;
+        }).forEach(function (element) {
+            output += element + '\n';
+        });*/
+
+
+        /*output += [1, 2, 3, 4, 5].reduce(function (previousValue, currentValue, index, array) {
+            alert("previousValue : " + previousValue + ", currentValue : " + currentValue);
+            return previousValue + " | " + currentValue + " | " + index + "\n"; 
+        }, "output : \n");
+
+        [1, 2, 3, 4, 5].reduce(function (previousValue, currentValue, index, array) {
+            output += previousValue + " | " + currentValue + " | " + index + "\n"; 
+            //return previousValue + " | " + currentValue + " | " + index + "\n";
+        });*/
+        //output += outArr + "\n";
+
+       /* [1, 2, 3, 4, 5].reduce(function (previousValue, currentValue, index, array) {
+            alert("previousValue : " + previousValue + ", currentValue : " + currentValue);
+            return previousValue + currentValue;
+        });*/
+
+        /*var jsonObj = { "name": "ksy", "age": 33 };
+        jsonObj.__proto__.toJSON = function () {
+            return { "custom": "custom" };
+        };
+        *//*jsonObj.constructor.prototype.toJSON = function () {
+            return { "custom": "custom" };
+        };*//*
+        output += JSON.stringify(jsonObj, {}, 3) + "\n";
+
+        var jsonParseObj = JSON.parse(JSON.stringify(jsonObj, {}, 3));
+        output += jsonParseObj.name + ", " + jsonParseObj.age + '\n';*/
+
+        var obj = {};
+
+        /*var value = "ksy";
+        Object.defineProperty(obj, "name", {
+            "get": function () {
+                alert("GETTER CALLED! " + value);
+                return value;
+            },
+            'set': function (name) {
+                alert("SETTER CALLED! " + name);
+                value = name;
+            }
+        });*/
+
+        Object.defineProperty(obj, "hidden", {
+            "value": {
+                "name": null
+            },
+            "writable": false,
+        });
+
+        Object.defineProperty(obj, "name", {
+            "get": function () {
+                return this.hidden.name;
+            },
+            "set": function (name) {
+                this.hidden.name = name;
+            }
+        });
+
+        obj.name = "john";
+        obj.hidden.name = "ksy";
+        output += obj.name + '\n';
+
+        obj.name = "ksy";
+        output += obj.name + "\n";
+
+        //output += new Object(obj).propertyIsEnumerable("hidden") + '\n';
+
+        for (var key in obj) {
+            output += key + '\n';
+        }
+
+        for (var key in Object.getOwnPropertyNames(obj)) {
+            output += Object.getOwnPropertyNames(obj)[key] + '\n';
+        }
+
+        alert(output);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
